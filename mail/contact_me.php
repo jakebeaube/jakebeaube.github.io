@@ -21,6 +21,7 @@ else                /* send the submitted data */
     {
     $name=$_REQUEST['name'];
     $email=$_REQUEST['email'];
+    $phone=$_REQUEST['phone'];
     $message=$_REQUEST['message'];
     if (($name=="")||($email=="")||($message==""))
         {
@@ -29,7 +30,7 @@ else                /* send the submitted data */
     else{      
        $from="From: $name<$email>\r\nReturn-path: $email";
         $subject="Message sent using your contact form";
-      // mail("youremail@yoursite.com", $subject, $message, $from);
+      mail("jakebeaube@hotmail.com", $subject, $message, $from);
       echo "Email sent!";
        }
     }  
